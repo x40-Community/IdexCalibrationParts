@@ -8,7 +8,8 @@ This plugin adds a menu to add IDEX offset calibration and test parts. After add
 In the plugin directory, create a subdirectory called IdexCalibrationParts. In this subdirectory create another subdirectory with the same name. Unpack the contents of the zip-file in this subdirectory and restart Cura.
 
 
-
+## Use
+After inserting, select and merge all parts
 
 ## Weedo like XY-Offset Calibration Parts
 ![Weedo calibration parts](./images/calibration_weedo_x40.png)
