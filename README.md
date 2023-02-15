@@ -25,9 +25,10 @@ Print this part with a raft
 
 
 ## Chessboard XY-Calibration Parts from the X40-Community
+Application see: http://www.x40-community.org/index.php/the-3d-printer/how-to-calibrate-the-weedo-x40-printer/2-uncategorised/25-set-the-xy-offset
 ![Chessboard parts](./images/chessboard_pattern.png)
 
-Application see: http://www.x40-community.org/index.php/the-3d-printer/how-to-calibrate-the-weedo-x40-printer/2-uncategorised/25-set-the-xy-offset
+
 
 
 ## XY-Offset Testparts from the X40-Community
