@@ -1,4 +1,4 @@
-# IDEX Calibration Parts
+# IDEX Calibration Parts Plugin for Ultimaker Cura
 
 This plugin adds a menu to add IDEX offset calibration and test parts. After adding a parts select and merge all models.
 
