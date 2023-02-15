@@ -12,11 +12,13 @@ In the plugin directory, create a subdirectory called IdexCalibrationParts. In t
 
 ## Weedo like XY-Offset Calibration Parts
 ![Weedo calibration parts](./images/calibration_weedo_x40.png)
+
 Print this parts with a raft
 
 
 ## Alternativ X-Calibration Part
 ![Alternativ calibration part](./images/calibration_alternativ.png)
+
 Print this part with a raft
 
 
