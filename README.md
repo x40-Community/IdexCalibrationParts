@@ -12,15 +12,16 @@ In the plugin directory, create a subdirectory called IdexCalibrationParts. In t
 After inserting, select and merge all parts
 
 ## Weedo like XY-Offset Calibration Parts
+Print this parts with a raft
 ![Weedo calibration parts](./images/calibration_weedo_x40.png)
 
-Print this parts with a raft
+
 
 
 ## Alternativ X-Calibration Part
+Print this part with a raft
 ![Alternativ calibration part](./images/calibration_alternativ.png)
 
-Print this part with a raft
 
 
 ## Chessboard XY-Calibration Parts from the X40-Community
