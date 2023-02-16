@@ -17,7 +17,7 @@ Print this parts with a raft
 
 
 ## Language
-The plugin was translated to German. For further translations into your mother tongue I need your help. It's easy. In the i18n directory, open the idexcalibration.pot file with an editor and put the translation between the quotes from msgstr and email it to me. You can find the address in the idexcalibration.pot file.
+The plugin was translated to German. For further translations into your mother tongue I need your help. It's easy. In the i18n directory, open the idexcalibration.pot file with an editor and put the translation between the quotes from msgstr and email it to me. You can find my email address in the idexcalibration.pot file.
 
 
 ## Alternativ X-Calibration Part
