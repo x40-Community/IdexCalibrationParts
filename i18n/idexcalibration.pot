@@ -19,51 +19,51 @@ msgstr ""
 
 #: IdexCalibrationParts:83
 msgctxt "@item:inmenu"
-msgid "Add part for Idex offset calibration or test"
-msgstr "Idex Versatzkalibrierungs-Teile oder Test hinzufügen"
+msgid "Add Part for IDEX Offset Calibration or Test"
+msgstr ""
 
 #: IdexCalibrationParts:84
 msgctxt "@item:inmenu"
 msgid "Coarse Offset Calibration Part, like Weedo (1mm)"
-msgstr "Grob-Kalibrierungsteil, wie Weedo (1mm)"
+msgstr ""
 
 #: IdexCalibrationParts:85
 msgctxt "@item:inmenu"
 msgid "Fine Offset Calibration Part, like Weedo (0.1mm)"
-msgstr "Fein-Kalibrierungsteil, wie Weedo (0.1mm)"
+msgstr ""
 
 #: IdexCalibrationParts:86
 msgctxt "@item:inmenu"
 msgid "Alternativ Offset Calibration Part"
-msgstr "Alternatives Offset Kalibrierungsteil"
+msgstr ""
 
 #: IdexCalibrationParts:88
 msgctxt "@item:inmenu"
-msgid "2x2 chess pattern Part"
-msgstr "2x2 Schachbettmusterteil"
+msgid "2x2 Chessboard Pattern Part"
+msgstr ""
 
 #: IdexCalibrationParts:89
 msgctxt "@item:inmenu"
-msgid "3x3 chess pattern Part"
-msgstr "3x3 Schachbettmusterteil"
+msgid "3x3 Chessboard Pattern Part"
+msgstr ""
 
 #: IdexCalibrationParts:91
 msgctxt "@item:inmenu"
 msgid "Bi-color Testcube"
-msgstr "Zweifarbiger Testwürfel"
+msgstr ""
 
 #: IdexCalibrationParts:92
 msgctxt "@item:inmenu"
 msgid "XYZ bi-Color Calibration Cube"
-msgstr "Zweifarbiger XYZ Kalibrierungswürfel"
+msgstr ""
 
 #: IdexCalibrationParts:93
 msgctxt "@item:inmenu"
 msgid "Extruder change-over Testcube"
-msgstr "Extruder Wechseltestwürfel"
+msgstr ""
 
 #: IdexCalibrationParts:95
 msgctxt "@item:inmenu"
 msgid "Help"
-msgstr "Hilfe"
+msgstr ""
 
