@@ -11,13 +11,14 @@ In the plugin directory, create a subdirectory called IdexCalibrationParts. In t
 ## Use
 After inserting, select and merge all parts
 
-## Weedo like XY-Offset Calibration Parts
-Print this parts with a raft
-![Weedo calibration parts](./images/calibration_weedo_x40.png)
-
 
 ## Language
 The plugin was translated to German. For further translations into your mother tongue I need your help. It's easy. In the i18n directory, open the idexcalibration.pot file with an editor and put the translation between the quotes from msgstr and email it to me. You can find my email address in the idexcalibration.pot file.
+
+
+## Weedo like XY-Offset Calibration Parts
+Print this parts with a raft
+![Weedo calibration parts](./images/calibration_weedo_x40.png)
 
 
 ## Alternativ X-Calibration Part
