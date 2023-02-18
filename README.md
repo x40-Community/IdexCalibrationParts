@@ -5,7 +5,7 @@ This plugin adds a menu to add IDEX offset calibration and test parts. After add
 ![menu Extensions IDEX Calibration Parts](./images/menu.png)
 
 ## Install
-In the plugin directory, create a subdirectory called IdexCalibrationParts. In this subdirectory create another subdirectory with the same name. Unpack the contents of the zip-file in this subdirectory and restart Cura.
+In the plugin directory, create a subdirectory called IdexCalibrationParts. In this subdirectory create another subdirectory with the same name. Download the Zip-file (green code button). Unpack the contents of the zip-file in this subdirectory and restart Cura.
 
 
 ## Use
