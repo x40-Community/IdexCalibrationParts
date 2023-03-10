@@ -5,8 +5,11 @@
 # Modifications M4L 2023
 #-----------------------------------------------------------------------------------
 #
-# V1.0.0 Initial Release
+# V1.1.0
 #-------------------------------------------------------------------------------------------
+#
+# - add flow test cube
+# - add manual and calculation tool
 
 VERSION_QT5 = False
 try:
@@ -16,7 +19,8 @@ except ImportError:
     from PyQt5.QtCore import QObject, pyqtProperty, pyqtSignal, pyqtSlot, QUrl
     from PyQt5.QtGui import QDesktopServices
     VERSION_QT5 = True
-    
+
+   
 # Imports from the python standard library to build the plugin functionality
 import os
 import sys
@@ -77,16 +81,22 @@ class IdexCalibrationParts(QObject, Extension):
     def __init__(self, parent = None) -> None:
         QObject.__init__(self, parent)
         
+        self._calc_folder = "calculation"
+        self._calc_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self._calc_folder, "Calulation_Tool.xls")
+        
         self._controller = CuraApplication.getInstance().getController()
         self._message = None
+        
         
         self.setMenuName(catalog.i18nc("@item:inmenu", "Add Part for IDEX Offset Calibration or Test"))
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Coarse Offset Calibration Part, like Weedo (1mm)"), self.addCoarsetuning)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Fine Offset Calibration Part, like Weedo (0.1mm)"), self.addFinetuning)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Alternativ Offset Calibration Part"), self.addExtruderOffsetCalibration)  
         self.addMenuItem("  ", lambda: None)  
+        self.addMenuItem(catalog.i18nc("@item:inmenu", "Flowtest cube"), self.addCube)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "2x2 Chessboard Pattern Part"), self.add2x2Chesspattern)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "3x3 Chessboard Pattern Part"), self.add3x3Chesspattern)
+        self.addMenuItem(catalog.i18nc("@item:inmenu", "Manual and calculation tool"), self.gotoCalulation)
         self.addMenuItem("   ", lambda: None)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Bi-color Testcube"), self.addCubeBiColor)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "XYZ bi-Color Calibration Cube"), self.addHollowCalibrationCube)
@@ -99,6 +109,8 @@ class IdexCalibrationParts(QObject, Extension):
     def gotoHelp(self) -> None:
         QDesktopServices.openUrl(QUrl("http://www.x40-community.org/index.php/9-cura-workflow/89-cura-idex-calibration-parts-plugin"))
 
+    def gotoCalulation(self) -> None:
+        QDesktopServices.openUrl(QUrl.fromLocalFile(self._calc_path))
             
     def _registerShapeStl(self, mesh_name, mesh_filename=None, **kwargs) -> None:
         if mesh_filename is None:
@@ -167,6 +179,12 @@ class IdexCalibrationParts(QObject, Extension):
     def addExtruderOffsetCalibration(self) -> None:
         self._registerShapeStl("CalibrationMultiExtruder1", "nozzle-to-nozzle-xy-offset-calibration-pattern-a.stl", ext_pos=1)
         self._registerShapeStl("CalibrationMultiExtruder1", "nozzle-to-nozzle-xy-offset-calibration-pattern-b.stl", ext_pos=2)
+
+    def addCube(self) -> None:
+        self._registerShapeStl("Flowtestcube", "cube_20x20x20.stl", ext_pos=1)
+        self._application.getMachineManager().setExtruderEnabled(1, True)
+        self._application.getMachineManager().setExtruderEnabled(2, False)
+       # self._activateExtruder(ext_no=0)
  
     def  add2x2Chesspattern(self) -> None:
         self._registerShapeStl("2x2ChessExt1", "xy_calibration_2x2_part1.stl", ext_pos=1)
@@ -351,3 +369,17 @@ class IdexCalibrationParts(QObject, Extension):
         node.addDecorator(SliceableObjectDecorator())
 
         application.getController().getScene().sceneChanged.emit(node)
+        
+    def _activateExtruder(self, ext_no) -> None:
+        if ext_no == 0:
+            #extruders = self._global_container_stack.extruderList
+            #if not extruders[0].isEnabled:  
+            self._application.getMachineManager().setExtruderEnabled(0, True)
+            node.callDecoration("setActiveExtruder", 0)
+            
+        if ext_no == 1:
+           # extruders = self._global_container_stack.extruderList
+           # if not extruders[1].isEnabled:  
+           self._application.getMachineManager().setExtruderEnabled(1, True)
+           node.callDecoration("setActiveExtruder", 1) 
+   

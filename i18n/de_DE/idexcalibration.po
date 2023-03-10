@@ -37,6 +37,11 @@ msgctxt "@item:inmenu"
 msgid "Alternativ Offset Calibration Part"
 msgstr "Alternatives Offset Kalibrierungsteil"
 
+#: IdexCalibrationParts:86
+msgctxt "@item:inmenu"
+msgid "Flowtest cube"
+msgstr "Materialfluss Testwürfel"
+
 #: IdexCalibrationParts:88
 msgctxt "@item:inmenu"
 msgid "2x2 Chessboard Pattern Part"
@@ -46,6 +51,11 @@ msgstr "2x2 Schachbettmusterteil"
 msgctxt "@item:inmenu"
 msgid "3x3 Chessboard Pattern Part"
 msgstr "3x3 Schachbettmusterteil"
+
+#: IdexCalibrationParts:89
+msgctxt "@item:inmenu"
+msgid "Manual and calculation tool"
+msgstr "Handbuch und Berechnungshilfe"
 
 #: IdexCalibrationParts:91
 msgctxt "@item:inmenu"

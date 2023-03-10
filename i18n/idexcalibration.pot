@@ -37,6 +37,11 @@ msgctxt "@item:inmenu"
 msgid "Alternativ Offset Calibration Part"
 msgstr ""
 
+#: IdexCalibrationParts:86
+msgctxt "@item:inmenu"
+msgid "Flowtest cube"
+msgstr ""
+
 #: IdexCalibrationParts:88
 msgctxt "@item:inmenu"
 msgid "2x2 Chessboard Pattern Part"
@@ -45,6 +50,11 @@ msgstr ""
 #: IdexCalibrationParts:89
 msgctxt "@item:inmenu"
 msgid "3x3 Chessboard Pattern Part"
+msgstr ""
+
+#: IdexCalibrationParts:89
+msgctxt "@item:inmenu"
+msgid "Manual and calculation tool"
 msgstr ""
 
 #: IdexCalibrationParts:91
