@@ -6,7 +6,7 @@ This plugin adds a menu to add IDEX offset calibration and test parts. After add
 
 ## Changelog
 1.0.0
-- Initial relese
+- Initial release
 
 1.1.0
 - Add manual and calculation tool
