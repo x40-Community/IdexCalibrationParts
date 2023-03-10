@@ -4,6 +4,7 @@ This plugin adds a menu to create some simple shapes to the scene (cube, cylinde
 
 The default size for all the simple shapes is 20 mm, but can be modified via the [**Define default size**](#Define-default-size) menu.
 
+<<<<<<< HEAD
 ![menu Extensions Calibration Shapes](./images/menu.jpg)
 
 ## Calibration part
@@ -36,14 +37,23 @@ You can also load standard test  / calibration  part :
 | [Lithophane Test](https://github.com/5axes/Calibration-Shapes/wiki/Lithophane-Test)                                   | [Lithophane Test](./models/Lithophane.stl)                        |
 | [Dimensional Accuracy Test](https://github.com/5axes/Calibration-Shapes/wiki/Dimensional-Accuracy-Test)         | [Dimensional Accuracy](./models/DimensionalAccuracyTest.stl)    |
 | [MultiCube Test](https://github.com/5axes/Calibration-Shapes/wiki/MultiCube)                                    | [MultiCube Test](./models/MultiCube.stl)                        |
+=======
+## Install
+In the plugin directory, create a subdirectory called IdexCalibrationParts. In this subdirectory create another subdirectory with the same name. Download the Zip-file (green code button). Unpack the contents of the zip-file in this subdirectory and restart Cura.
+
+The IDEX Calibration Parts Plugin works with Ultimaker Cura 4.X and 5.X
+>>>>>>> ba4acc3a0cb0925ef9e2a992be485cf10770fcda
 
 
 Multi flow parts : For this parts the initial design is scaled to the nozzle size
 
+<<<<<<< HEAD
 | Wiki Page                                                                                               | Stl Model                                                |
 |:-------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------:|
 | [Parametric Multi Flow test](https://github.com/5axes/Calibration-Shapes/wiki/MultiFlowTest) | [Flow 100%](./models/Flow100.stl) |
 
+=======
+>>>>>>> ba4acc3a0cb0925ef9e2a992be485cf10770fcda
 
 Bed Level : For this part the initial design is scaled to the bed size
 
@@ -68,6 +78,7 @@ The function **Define default size** gives you the possibility to change the def
 This plugin is using the [Trimesh](https://github.com/mikedh/trimesh) library to create [simple shapes](https://github.com/mikedh/trimesh/blob/master/trimesh/creation.py) and to load STL files.
 
 
+<<<<<<< HEAD
 ## Cura-Postprocessing-Scripts
 
 Several postprocessing Scripts are included into the plugin to help the user to generate automaticaly the differents Towers.
@@ -125,6 +136,16 @@ Description:  postprocessing-script to easily create a temptower and not use 10 
 
 
 #### [RetractTower.py](resources/scripts/RetractTower.py)
+=======
+## Weedo like XY-Offset Calibration Parts
+Print this parts with a raft
+![Weedo calibration parts](./images/calibration_weedo_x40.png)
+
+
+## Alternativ X-Calibration Part
+Print this part with a raft
+![Alternativ calibration part](./images/calibration_alternativ.png)
+>>>>>>> ba4acc3a0cb0925ef9e2a992be485cf10770fcda
 
 
 
