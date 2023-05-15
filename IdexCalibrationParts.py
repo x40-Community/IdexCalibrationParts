@@ -5,11 +5,10 @@
 # Modifications M4L 2023
 #-----------------------------------------------------------------------------------
 #
-# V1.1.0
+# V1.2.0
 #-------------------------------------------------------------------------------------------
 #
-# - add flow test cube
-# - add manual and calculation tool
+# - integrate select all and merge
 
 VERSION_QT5 = False
 try:
@@ -29,6 +28,7 @@ import math
 import numpy
 import trimesh
 import shutil
+
 from shutil import copyfile
 
 from typing import Optional, List
@@ -171,29 +171,41 @@ class IdexCalibrationParts(QObject, Extension):
     def addCoarsetuning(self) -> None:
         self._registerShapeStl("CoarseExt1", "coarse_tuning_part1.stl", ext_pos=1)
         self._registerShapeStl("CoarseExt2", "coarse_tuning_part2.stl", ext_pos=2)
+        coarse = CuraApplication.getInstance()
+        coarse.selectAll()
+        coarse.mergeSelected()
         
     def addFinetuning(self) -> None:
         self._registerShapeStl("FineExt1", "fine_tuning_part1.stl", ext_pos=1)
-        self._registerShapeStl("FineExt2", "fine_tuning_part2.stl", ext_pos=2) 
+        self._registerShapeStl("FineExt2", "fine_tuning_part2.stl", ext_pos=2)
+        fine = CuraApplication.getInstance()
+        fine.selectAll()
+        fine.mergeSelected()
  
     def addExtruderOffsetCalibration(self) -> None:
         self._registerShapeStl("CalibrationMultiExtruder1", "nozzle-to-nozzle-xy-offset-calibration-pattern-a.stl", ext_pos=1)
         self._registerShapeStl("CalibrationMultiExtruder1", "nozzle-to-nozzle-xy-offset-calibration-pattern-b.stl", ext_pos=2)
+        multi = CuraApplication.getInstance()
+        multi.selectAll()
+        multi.mergeSelected()
 
     def addCube(self) -> None:
         self._registerShapeStl("Flowtestcube", "cube_20x20x20.stl", ext_pos=1)
         self._application.getMachineManager().setExtruderEnabled(1, True)
-        self._application.getMachineManager().setExtruderEnabled(2, False)
-       # self._activateExtruder(ext_no=0)
  
     def  add2x2Chesspattern(self) -> None:
         self._registerShapeStl("2x2ChessExt1", "xy_calibration_2x2_part1.stl", ext_pos=1)
-        self._registerShapeStl("2x2ChessExt2", "xy_calibration_2x2_part2.stl", ext_pos=2) 
- 
+        self._registerShapeStl("2x2ChessExt2", "xy_calibration_2x2_part2.stl", ext_pos=2)
+        chess2x2 = CuraApplication.getInstance()
+        chess2x2.selectAll()
+        chess2x2.mergeSelected()
+        
     def  add3x3Chesspattern(self) -> None:
         self._registerShapeStl("3x3ChessExt1", "xy_calibration_3x3_part1.stl", ext_pos=1)
         self._registerShapeStl("3x3ChessExt2", "xy_calibration_3x3_part2.stl", ext_pos=2) 
- 
+        chess3x3 = CuraApplication.getInstance()
+        chess3x3.selectAll()
+        chess3x3.mergeSelected()
  
     #-----------------------------
     #   Dual Extruder Test parts
@@ -201,14 +213,23 @@ class IdexCalibrationParts(QObject, Extension):
     def addCubeBiColor(self) -> None:
         self._registerShapeStl("CubeBiColorExt1", "40mm_two_color_cube_part1.stl", ext_pos=1)
         self._registerShapeStl("CubeBiColorExt2", "40mm_two_color_cube_part2.stl", ext_pos=2)
+        bicolorcube = CuraApplication.getInstance()
+        bicolorcube.selectAll()
+        bicolorcube.mergeSelected()
 
     def addHollowCalibrationCube(self) -> None:
         self._registerShapeStl("CubeBiColorExt", "dual_color_xyz_cube_part1.stl", ext_pos=1)
         self._registerShapeStl("CubeBiColorInt", "dual_color_xyz_cube_part2.stl", ext_pos=2)
+        calibrationcube = CuraApplication.getInstance()
+        calibrationcube.selectAll()
+        calibrationcube.mergeSelected()
        
     def addExtruderChangeCube(self) -> None:
         self._registerShapeStl("ChangeOverExt1", "change-over_testcube_part1.stl", ext_pos=1)
         self._registerShapeStl("ChangeOverExt2", "change-over_testcube_part2.stl", ext_pos=2)
+        changeover = CuraApplication.getInstance()
+        changeover.selectAll()
+        changeover.mergeSelected()
         
         
     #----------------------------------------
